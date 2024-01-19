@@ -11,7 +11,17 @@ The current projet is divided in a few sections: we first introduce the data and
 The data we used in the project consists in 30 days worth of BTC-USD (bitcoin, in \$) historical prices at 1-min intervals. We retrieved it using the Yahoo Finance API over the period 02/11/2023 - 01/12/2023.
 
 ## Statistical methods (ARIMA, GARCH)
+All the cells concerning Statistical methods in the notebook are original.
+We introduce the mathematical frameworks related to ARIMA and GARCH modelling.
 
+### Stationarity and mixing property
+To train statistical models on the Bitcoin prices series, we first stationarize it.
+
+### ARIMA and GARCH training
+By looking at Autocorrelation and Partial Autocorrelation graphs as well as test statistics and AIC/BIC, we selected an AR(1)-GARCH(1,2).
+
+### Evaluation
+All cells can be run without problem.
 
 ## Deep Learning (RNN, LSTM, GRU)
 All the cells concerning Deep Learning in the notebook are original.
