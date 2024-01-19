@@ -17,4 +17,17 @@ The data we used in the project consists in 30 days worth of BTC-USD (bitcoin, i
 All the cells concerning Deep Learning in the notebook are original.
 In order to use the models we trained, unzip the trained_models file in the same folder as the notebook.
 Every section needed to be run are specified in the notebook.
-### Data 
+
+### Data Processing using sliding window
+In order to transform the original time series into a list of sequences, we wrote the `create_dataset` that performs the wanted slicing.
+
+### Model Generators
+The `ceate_XXX_model` functions take in argmunents the dropout rate, the number of RNN-like layers and the number of units per layers. Each function return the Keras object corresponding to the wanted model.
+
+### GridSearch
+This part of the notebook aim to screen which parameters minimize the loss over the validation dataset. We thus use the `GridSeachCV` function from sklearn package with a custom splitting `ps` in order to create a single fold for validation.
+> [!WARNING]  
+> Do not launch the cells of this part, they are only present for reproducibility
+
+### Model loading and evaluation
+If the importation of the models weights has been done, the last cells of the notebook allow to apply these over blank models and to print the RMSE metrics for each datasets or plot the predictions.
